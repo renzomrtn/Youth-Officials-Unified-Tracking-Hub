@@ -11,22 +11,18 @@ const showSidebar = computed(() => !route.meta.hideLayout)
 <template>
   <v-app>
     <NavBar />
-    <SideBar v-if="showSidebar" />
-    <v-main>
-      <RouterView />
-    </v-main>
+
+    <v-layout>
+      <SideBar v-if="showSidebar" />
+
+      <v-main>
+        <RouterView />
+      </v-main>
+    </v-layout>
   </v-app>
 </template>
-
 <style scoped>
-v-app {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-v-main {
-  flex: 1;
-  display: flex;
+:deep(.v-main) {
+  background-color: #f3f3f3;
 }
 </style>
