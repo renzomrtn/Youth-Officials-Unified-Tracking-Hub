@@ -11,8 +11,8 @@ const showSidebar = computed(() => !route.meta.hideLayout)
 <template>
   <v-app>
     <NavBar />
+    <SideBar v-if="showSidebar" />
     <v-main>
-      <SideBar v-if="showSidebar" />
       <RouterView />
     </v-main>
   </v-app>

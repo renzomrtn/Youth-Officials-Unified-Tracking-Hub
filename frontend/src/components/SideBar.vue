@@ -1,12 +1,12 @@
 <template>
-  <div class="sidebar">
+  <div>
     <v-navigation-drawer permanent>
-      <v-list>
+      <v-list nav>
         <v-list-item
           v-for="route in navigationRoutes"
           :key="route.path"
           :to="route.path"
-          :active="isActiveRoute(route.path)"
+          :value="route.path"
           color="primary"
         >
           <template v-slot:prepend v-if="route.meta?.icon">
@@ -21,20 +21,19 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const route = useRoute()
 
-// Filter routes that should appear in the sidebar
 const navigationRoutes = computed(() => {
-  return router.getRoutes().filter(r => r.meta?.showInSidebar)
+  return router.getRoutes()
+    .filter(r => r.meta?.showInSidebar)
+    .sort((a, b) => (a.meta.order || 999) - (b.meta.order || 999))
 })
-
-const isActiveRoute = (path) => {
-  return route.path === path || route.path.startsWith(path + '/')
-}
 </script>
+
+<style scoped>
+</style>
 
 <style scoped>
 .sidebar {
