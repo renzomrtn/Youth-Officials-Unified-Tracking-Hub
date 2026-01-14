@@ -38,8 +38,10 @@ const isActiveRoute = (path) => {
 
 <style scoped>
 .sidebar {
-  background-color: aqua;
+  width: 250px;
+  background-color: #ffffff;
   padding: 24px;
+  border-right: #e5e7eb 1px solid;
 }
 v-list {
   display: flex;

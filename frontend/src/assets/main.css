@@ -13,6 +13,13 @@ html, body {
   height: 100%;
   margin: 0 auto;
   font-weight: normal;
+  background-color: #f3f3f3;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 @media (min-width: 1024px) {
