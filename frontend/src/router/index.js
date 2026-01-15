@@ -38,7 +38,7 @@ const routes = [
     meta: { 
       showInSidebar: true,
       title: 'Project Management',
-      icon: 'mdi-folder-multiple',
+      icon: 'mdi-folder-table-outline',
       order: 2,
       tabs: [
         { name: 'Projects', route: '/projects', default: true },
@@ -71,7 +71,7 @@ const routes = [
     meta: { 
       showInSidebar: true,
       title: 'Expense Verification',
-      icon: 'mdi-receipt',
+      icon: 'mdi-google-analytics',
       order: 4,
       tabs: [
         { name: 'Current Verifications', route: '/expenses', default: true },
@@ -87,7 +87,7 @@ const routes = [
     meta: { 
       showInSidebar: true,
       title: 'Archives',
-      icon: 'mdi-archive',
+      icon: 'mdi-archive-outline',
       order: 5
     }
   },
@@ -98,7 +98,7 @@ const routes = [
     meta: { 
       showInSidebar: true,
       title: 'Portal',
-      icon: 'mdi-web',
+      icon: 'mdi-view-compact-outline',
       order: 6
     }
   },
