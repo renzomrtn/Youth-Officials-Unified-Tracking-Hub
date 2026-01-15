@@ -7,8 +7,13 @@ import ExpensesView from '@/views/Expense/ExpensesView.vue'
 import ArchivesView from '@/views/Archive/ArchivesView.vue'
 import PortalView from '@/views/Portal/PortalView.vue'
 import PersonnelView from '@/views/Personnel/PersonnelView.vue'
+import CertificateGenerator from '@/views/Project/CertificateGenerator.vue'
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/login'
+  },
   {
     path: '/login',
     name: 'Login',
@@ -34,7 +39,13 @@ const routes = [
       showInSidebar: true,
       title: 'Project Management',
       icon: 'mdi-folder-multiple',
-      order: 2
+      order: 2,
+      tabs: [
+        { name: 'Projects', route: '/projects', default: true },
+        { name: 'Certificate Generator', route: '/projects/certificate-generator' },
+        { name: 'Projects by Year', route: '/projects/by-year' },
+        { name: 'Project Monitor', route: '/projects/monitor' }
+      ]
     }
   },
   {
@@ -45,7 +56,12 @@ const routes = [
       showInSidebar: true,
       title: 'Budget Preparation',
       icon: 'mdi-currency-usd',
-      order: 3
+      order: 3,
+      tabs: [
+        { name: 'Line Items', route: '/budget', default: true },
+        { name: 'Needs Assessment', route: '/budget/needs-assessment' },
+        { name: 'SK Monitor', route: '/budget/monitor' }
+      ]
     }
   },
   {
@@ -56,7 +72,12 @@ const routes = [
       showInSidebar: true,
       title: 'Expense Verification',
       icon: 'mdi-receipt',
-      order: 4
+      order: 4,
+      tabs: [
+        { name: 'Current Verifications', route: '/expenses', default: true },
+        { name: 'Past Verifications', route: '/expenses/past-verifications' },
+        { name: 'Verifications Monitoring', route: '/expenses/monitor' },
+      ]
     }
   },
   {
@@ -90,6 +111,16 @@ const routes = [
       title: 'Personnel',
       icon: 'mdi-account-group',
       order: 7
+    }
+  },
+  // child routes
+  {
+    path: '/projects/certificate-generator',
+    name: 'Certificate-Generator',
+    component: CertificateGenerator,
+    meta: {
+      parentRoute: '/projects',
+      title: 'Certificate Generator'
     }
   }
 ];

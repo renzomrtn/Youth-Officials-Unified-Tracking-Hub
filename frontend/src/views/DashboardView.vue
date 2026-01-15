@@ -1,5 +1,7 @@
 <template>
     <section class="content">
-        <h1>Dashboard</h1>
+        <div class="inner-content">
+            <h1>Dashboard</h1>
+        </div>
     </section>
 </template>

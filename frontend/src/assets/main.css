@@ -19,8 +19,32 @@ html, body {
 .content {
   width: 100%;
   margin: 0 auto;
+  background-color: #f3f3f3;
+}
+
+.tabs-list {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.inner-content {
+  margin: 0 auto;
   padding: 2rem;
 }
+
+.tables .table-header {
+  height: 5rem;
+}
+
+.tables .row-header {
+  background-color: #787e83;
+  color: white;
+}
+
+.tables tbody tr:hover {
+  background-color: #e3f2fd;
+}
+
 
 @media (min-width: 1024px) {
   body {

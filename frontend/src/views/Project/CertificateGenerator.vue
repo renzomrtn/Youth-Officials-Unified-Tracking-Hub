@@ -4,7 +4,7 @@
             <TabsList v-if="hasTabs" />
         </div>
         <div class="inner-content">
-            
+
         </div>
     </section>
 </template>

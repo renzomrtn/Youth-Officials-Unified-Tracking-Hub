@@ -6,11 +6,12 @@ import SideBar from './components/SideBar.vue'
 
 const route = useRoute()
 const showSidebar = computed(() => !route.meta.hideLayout)
+const showNavBar = computed(() => !route.meta.hideLayout)
 </script>
 
 <template>
   <v-app>
-    <NavBar />
+    <NavBar v-if="showNavBar" />
 
     <v-layout>
       <SideBar v-if="showSidebar" />
@@ -21,8 +22,3 @@ const showSidebar = computed(() => !route.meta.hideLayout)
     </v-layout>
   </v-app>
 </template>
-<style scoped>
-:deep(.v-main) {
-  background-color: #f3f3f3;
-}
-</style>
