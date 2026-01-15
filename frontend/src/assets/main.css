@@ -33,6 +33,27 @@ html, body {
   padding: 2rem;
 }
 
+.holder {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.toolbar {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
 .tables .table-header {
   height: 5rem;
 }
