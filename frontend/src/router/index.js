@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+// main pages
 import LoginView from '@/views/LoginView.vue'
 import DashboardView from '@/views/DashboardView.vue'
 import ProjectsView from '@/views/Project/ProjectsView.vue'
@@ -7,7 +8,10 @@ import ExpensesView from '@/views/Expense/ExpensesView.vue'
 import ArchivesView from '@/views/Archive/ArchivesView.vue'
 import PortalView from '@/views/Portal/PortalView.vue'
 import PersonnelView from '@/views/Personnel/PersonnelView.vue'
+// sub pages
 import CertificateGenerator from '@/views/Project/CertificateGenerator.vue'
+import ProjectsByYear from '@/views/Project/ProjectsByYear.vue'
+import SKMonitor from '@/views/Project/SKMonitor.vue'
 
 const routes = [
   {
@@ -43,7 +47,7 @@ const routes = [
       tabs: [
         { name: 'Projects', route: '/projects', default: true },
         { name: 'Certificate Generator', route: '/projects/certificate-generator' },
-        { name: 'Projects by Year', route: '/projects/by-year' },
+        { name: 'Projects by Year', route: '/projects/projects-by-year' },
         { name: 'Project Monitor', route: '/projects/monitor' }
       ]
     }
@@ -121,6 +125,24 @@ const routes = [
     meta: {
       parentRoute: '/projects',
       title: 'Certificate Generator'
+    }
+  },
+  { 
+    path: '/projects/projects-by-year',
+    name: 'Projects-By-Year',
+    component: ProjectsByYear,
+    meta: {
+      parentRoute: '/projects',
+      title: 'Projects By Year'
+    }
+  },
+  {
+    path: '/projects/monitor',
+    name: 'SK-Monitor',
+    component: SKMonitor,
+    meta: {
+      parentRoute: '/projects',
+      title: 'SK Monitor'
     }
   }
 ];
