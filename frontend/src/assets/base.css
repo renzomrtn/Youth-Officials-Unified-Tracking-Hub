@@ -1,3 +1,6 @@
+/* Import Source Sans 3 from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #ffffff;
@@ -36,28 +39,12 @@
   --section-gap: 160px;
 }
 
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
-}
-*/
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-weight: normal;
+  /* Removed 'font-weight: normal' to allow bold headings/breadcrumbs */
 }
 
 body {
@@ -68,7 +55,10 @@ body {
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
+  
+  /* System font set to Source Sans 3 */
   font-family:
+    'Source Sans 3',
     Inter,
     -apple-system,
     BlinkMacSystemFont,
@@ -81,8 +71,15 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: 15px;
+  
+  font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Helper to ensure headings utilize the font weights correctly */
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-weight: 600;
+  color: var(--color-heading);
 }
