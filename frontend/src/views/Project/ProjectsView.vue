@@ -8,8 +8,8 @@
                 <div class="wrapper">
                     <h1>Projects for 2025</h1>
                     <div class="toolbar">
-                        <v-text-field label="Label"></v-text-field>
-                        <v-btn>+ Add Project</v-btn>
+                        <v-text-field label="Search Projects"></v-text-field>
+                        <v-btn rounded>+ Add Project</v-btn>
                     </div>
                 </div>
                 <v-table striped="even" hover rounded class="tables rounded-lg overflow-hidden">
@@ -47,13 +47,13 @@
                         <tr v-for="item in desserts" :key="item.name">
                             <td>V</td>
                             <td>{{ item.name }}</td>
-                            <td>{{ item.calories }}</td>
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.calories }}</td>
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.calories }}</td>
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.calories }}</td>
+                            <td>{{ item.title }}</td>
+                            <td>{{ item.lineitem }}</td>
+                            <td>{{ item.budget }}</td>
+                            <td>{{ item.date }}</td>
+                            <td>{{ item.progress }}</td>
+                            <td>{{ item.expense }}</td>
+                            <td>{{ item.action }}</td>
                         </tr>
                     </tbody>
                 </v-table>
@@ -71,24 +71,54 @@ const { hasTabs } = useTabs()
 
 const desserts = ref([
     {
-        name: 'Frozen Yogurt',
-        calories: 159,
+        name: 'Melody Marks',
+        title: 'HIV/AIDS Awareness Seminar',
+        lineitem: '123456',
+        budget: 159,
+        date: '1/1/2025',
+        progress: '100%',
+        expense: 'Pending',
+        action: 'edit'
     },
     {
-        name: 'Ice cream sandwich',
-        calories: 237,
+        name: 'Hazel Moore',
+        title: 'Cleanup Drive',
+        lineitem: '123457',
+        budget: 159,
+        date: '1/1/2025',
+        progress: '100%',
+        expense: 'Pending',
+        action: 'edit'
     },
     {
-        name: 'Eclair',
-        calories: 262,
+        name: 'Valerica Steele',
+        title: 'Tree Planting',
+        lineitem: '123458',
+        budget: 159,
+        date: '1/1/2025',
+        progress: '100%',
+        expense: 'Pending',
+        action: 'edit'
     },
     {
-        name: 'Cupcake',
-        calories: 305,
+        name: 'Tru Kait',
+        title: 'Cooking Seminar',
+        lineitem: '123459',
+        budget: 159,
+        date: '1/1/2025',
+        progress: '100%',
+        expense: 'Pending',
+        action: 'edit'
     },
     {
-        name: 'Gingerbread',
-        calories: 356,
+        name: 'Eden Ivy',
+        title: 'Resume Making / Job Application Seminar',
+        lineitem: '123455',
+        budget: 159,
+        date: '1/1/2025',
+        progress: '100%',
+        expense: 'Pending',
+        action: 'edit'
     },
 ])
 </script>
