@@ -19,10 +19,6 @@ const toggleSidebar = () => {
   emit('toggle-sidebar')
 }
 
-/**
- * Computes the breadcrumb trail based on the current route's meta data.
- * It checks for 'parentRoute' to create a two-level trail if necessary.
- */
 const breadcrumbs = computed(() => {
   const crumbs = []
 
